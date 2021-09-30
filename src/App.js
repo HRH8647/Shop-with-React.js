@@ -1,24 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+//toast
+import { ToastProvider } from 'react-toast-notifications';
+//context
+import ContextProductsProvider from './context/ContextProductsProvider';
+import CardContextProvider from './context/CardContextProvider';
+//components
+import ProductDetails from './components/ProductDetails';
+import Store from './components/Store';
+import Navbar from './components/Navbar';
+import ShopCard from './shared/ShopCard';
+//react-router-dom
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContextProductsProvider>
+      <CardContextProvider>
+        <ToastProvider>
+          <Navbar />
+          <Switch>
+            <Route path="/product/:id" component={ProductDetails} />
+            <Route path="/product" component={Store} />
+            <Route path="/shopcard" component={ShopCard} />
+            <Redirect to="/product" />
+          </Switch>
+        </ToastProvider>
+      </CardContextProvider>
+    </ContextProductsProvider>
   );
 }
 

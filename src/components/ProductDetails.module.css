@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.container img {
+    max-width: 20%;
+}
+.box {
+    margin: 0 30px;
+}
+.box h3 {
+    color: #1753ad;
+    font-size: 30px;
+}
+.box p {
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    max-width: 70%;
+}
+.price {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.goto {
+    text-decoration: none;
+    border: none;
+    background-color: #1753ad;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px 25px;
+    margin-top: 10px;
+}
+.goto:hover {
+    background-color: #2775e9;
+}

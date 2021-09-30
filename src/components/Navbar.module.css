@@ -1,0 +1,48 @@
+.container {
+    background-color: rgb(236, 236, 236);
+    height: 3.5rem;
+    box-shadow: 0 3px 10px rgb(146, 146, 146);
+    margin-bottom: 40px;
+    position: sticky;
+    top: 0;
+}
+.box {
+    max-width: 85%;
+    height: 100%;
+    margin:  0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product{
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #1753ad;
+    border-bottom: 2px solid #1753ad;
+    padding-bottom: 5px;
+}
+.icon {
+    font-size: 30px;
+    text-decoration: none;
+    color: #1753ad;
+}
+.counter {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(248, 190, 29);
+    border-radius: 50%;
+    color: rgb(20, 20, 20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    position: absolute;
+    left: 25px;
+}
+.shop {
+    position: relative;
+    display: flex;
+    border: none;
+}
